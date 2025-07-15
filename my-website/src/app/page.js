@@ -25,41 +25,56 @@ export default function Home() {
           <p className="pl-3">My intro, what motivates me, and what I love</p>
         </div>
 
-        {/* project section */}
-        <section className="bg-gray-100 p-6 mt-8 rounded-md shadow">
-          <h2 className="text-xl font-bold mb-4">Featured Projects</h2>
+    {/* project section */}
+<section className="bg-gray-100 p-6 mt-8 rounded-md shadow">
+  <h2 className="text-xl font-bold mb-4">Featured Projects</h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {[1, 2, 3].map((num) => (
-          <div key={num} className="group perspective">
-          <div className="relative w-full h-48 transition-transform duration-500 transform-style-preserve-3d group-hover:rotate-y-180">
-
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    {[1, 2, 3].map((num) => (
+      <div key={num} className="group [perspective:1000px]">
+        <div
+          className="relative w-full h-48 transition-transform duration-500 group-hover:[transform:rotateY(180deg)]"
+          style={{
+            transformStyle: "preserve-3d",
+            transformOrigin: "center",
+          }}
+        >
           {/* Front */}
-          <div className="absolute inset-0 backface-hidden">
+          <div
+            className="absolute inset-0"
+            style={{ backfaceVisibility: "hidden" }}
+          >
             <Image
-              src={`/header${num}.jpeg`} 
+              src={`/header${num}.jpeg`}
               alt={`Project ${num}`}
               fill
               className="object-cover rounded-md"
-                />
-            </div>
+            />
+          </div>
 
           {/* Back */}
-          <div className="absolute inset-0 bg-white flex items-center justify-center text-center text-sm p-4 rotate-y-180 backface-hidden rounded-md shadow">
+          <div
+            className="absolute inset-0 bg-white flex items-center justify-center text-center text-sm p-4 rounded-md shadow"
+            style={{
+              backfaceVisibility: "hidden",
+              transform: "rotateY(180deg)",
+            }}
+          >
             <p>Project {num} description goes here.</p>
-            </div>
           </div>
         </div>
-      ))}
-    </div>
+      </div>
+    ))}
+  </div>
 
   {/* More button */}
   <div className="flex justify-end mt-4">
-    <a href="/projects" className="text-sm text-blue-500 hover:underline">
+    <a href="/projects" className="text-sm text-green-800 hover:underline">
       more →
     </a>
   </div>
 </section>
+
 
 
       {/* FOOTER CONTENT */}
