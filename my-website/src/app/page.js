@@ -5,8 +5,10 @@ export default function Home() {
     <main className="min-h-screen font-serif pl-2 pr-2">
       {/* HEADER CONTENT */}
       <header className="text-left pt-20">
-        <h1 className="pb-3 text-black text-3xl font-bold ">welcome</h1>
-        <p>hyperlinks here</p>
+        <h1 className="pb-3 text-black text-3xl font-bold ">malena lodi</h1>
+        <div className="text-blue-800">
+          <p><a href="/contact" className="underline">contact</a> | <a href="/resume" className="underline">resume</a> | <a href="/projects" className="underline">projects</a></p>
+        </div>
       </header>
       <div className="bg-gray-100">
         <p className="text-sm italic">some quote</p>
@@ -77,8 +79,12 @@ export default function Home() {
 
 
 
+
       {/* FOOTER CONTENT */}
        {/* info about website */}
+       <footer className="mt-8 text-sm italic text-gray-500 text-center">
+          <p>this website was created using dadadada</p>
+       </footer>
 
 
       

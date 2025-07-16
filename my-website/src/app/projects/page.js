@@ -11,10 +11,17 @@ export default function Home() {
       <div className="bg-gray-100">
         <p className="text-sm italic">some quote</p>
       </div>
-
+      <div className="flex justify-end mt-4">
+        <a href="/" className="text-sm text-green-800 hover:underline">
+        home →
+        </a>
+      </div>
+      
       {/* project section */}
       <section className="bg-gray-100 p-6 mt-8 rounded-md shadow">
+    
         <h2 className="text-xl font-bold mb-4">Featured Projects</h2>
+        
       
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
@@ -54,13 +61,6 @@ export default function Home() {
           ))}
         </div>
 
-      
-
-      <div className="flex justify-end mt-4">
-        <a href="/" className="text-sm text-green-800 hover:underline">
-        home →
-        </a>
-      </div>
 </section>
 
 
