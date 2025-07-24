@@ -2,12 +2,17 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen font-serif pl-2 pr-2">
+    <main className="min-h-screen font-serif pl-2 pr-2 m-7">
       {/* HEADER CONTENT */}
       <header className="text-left pt-20">
         <h1 className="pb-3 text-black text-3xl font-bold ">malena lodi</h1>
         <div className="text-blue-800">
-          <p><a href="/contact" className="underline">contact</a> | <a href="/resume" className="underline">resume</a> | <a href="/projects" className="underline">projects</a></p>
+          <p>
+            <a href="/" className="underline">home</a> |
+            <a href="/contact" className="underline">contact</a> | 
+            <a href="/resume" className="underline">resume</a> | 
+            <a href="/projects" className="underline">projects</a>
+          </p>
         </div>
       </header>
       <div className="bg-gray-100">
