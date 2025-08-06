@@ -32,20 +32,20 @@ export default function Home() {
           <p className="pl-3">My intro, what motivates me, and what I love</p>
         </div>
 
-    {/* project section */}
-<section className="bg-gray-100 p-6 mt-8 rounded-md shadow">
-  <h2 className="text-xl font-bold mb-4">Featured Projects</h2>
+        {/* project section */}
+        <section className="bg-gray-100 p-6 mt-8 rounded-md shadow">
+          <h2 className="text-xl font-bold mb-4">Featured Projects</h2>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-    {[1, 2, 3].map((num) => (
-      <div key={num} className="group [perspective:1000px]">
-        <div
-          className="relative w-full h-48 transition-transform duration-500 group-hover:[transform:rotateY(180deg)]"
-          style={{
-            transformStyle: "preserve-3d",
-            transformOrigin: "center",
-          }}
-        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {[1, 2, 3].map((num) => (
+              <div key={num} className="group [perspective:1000px]">
+              <div
+                className="relative w-full h-48 transition-transform duration-500 group-hover:[transform:rotateY(180deg)]"
+                style={{
+                transformStyle: "preserve-3d",
+                transformOrigin: "center",
+                }}
+              >
           {/* Front */}
           <div
             className="absolute inset-0"

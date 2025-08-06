@@ -27,17 +27,20 @@ export default function Home() {
             <p className="flex justify-between">
                 <span className="font-bold text-gray-600">Email:</span> 
                 <span>malenalodi3@gmail.com</span>
-                <span className="text-green-800 font-bold underline hover:text-green-600">
-                  <a href="mailto:malenalodi3@gmail.com">Send Email</a>
-                </span>
+                
             </p>
             <p className="flex justify-between">
                 <span className="font-bold text-gray-600">Phone Number:</span> 
                 <span>(626) 755-8760</span>
-                <span className="text-green-800 font-bold underline hover:text-green-600">
-                  <a href="tel:+16267558760">Make Call</a>
-                </span>
             </p>  
+            <p className="text-center  mt-5">
+            <span className="text-green-800 font-bold underline hover:text-green-600 mr-3">
+                  <a href="mailto:malenalodi3@gmail.com">Send Email</a>
+            </span>
+            <span className="text-green-800 font-bold underline hover:text-green-600 ml-3">
+                  <a href="tel:+16267558760">Make Call</a>
+            </span>
+            </p>
         </section>
         <section className="border-1 p-6 mt-3">
             <h2 className="text-xl font-bold mb-4 text-center">Socials</h2>
