@@ -16,7 +16,8 @@ export default function Home() {
         </div>
       </header>
       <div className="bg-gray-100">
-        <p className="text-sm italic">some quote</p>
+      <p className="text-sm italic pl-1">everything in time</p>
+
       </div>
 
       {/* MAIN CONTENT */}
@@ -51,8 +52,8 @@ export default function Home() {
 
       {/* FOOTER CONTENT */}
        {/* info about website */}
-       <footer className="mt-8 text-sm italic text-gray-500 text-center">
-          <p>this website was created using dadadada</p>
+       <footer className="mt-8 text-xs italic text-gray-500 text-center">
+          <p>Built using Next.js, React, and Tailwind CSS. Deployed with Vercel.</p>
        </footer>
 
 

@@ -16,7 +16,7 @@ export default function Home() {
         </div>
       </header>
       <div className="bg-gray-100">
-        <p className="text-sm italic">some quote</p>
+        <p className="text-sm italic pl-1">everything in time</p>
       </div>
 
       {/* MAIN CONTENT */}
@@ -45,8 +45,8 @@ export default function Home() {
         <section className="border-1 p-6 mt-3">
             <h2 className="text-xl font-bold mb-4 text-center">Socials</h2>
             <p className="text-center">
-              <span className="p-8 underline"><a href="https://www.linkedin.com/in/malena-lodi-07a0aa251/">LinkedIn</a></span>
-              <span className="p-8 underline"><a href="https://github.com/malena-3">GitHub</a></span>
+              <span className="p-8 underline hover:text-gray-400"><a href="https://www.linkedin.com/in/malena-lodi-07a0aa251/">LinkedIn</a></span>
+              <span className="p-8 underline hover:text-gray-400"><a href="https://github.com/malena-3">GitHub</a></span>
             </p>
 
             
@@ -61,8 +61,8 @@ export default function Home() {
 
       {/* FOOTER CONTENT */}
        {/* info about website */}
-       <footer className="mt-8 text-sm italic text-gray-500 text-center">
-          <p>this website was created using dadadada</p>
+       <footer className="mt-8 text-xs italic text-gray-500 text-center">
+          <p>Built using Next.js, React, and Tailwind CSS. Deployed with Vercel.</p>
        </footer>
 
 

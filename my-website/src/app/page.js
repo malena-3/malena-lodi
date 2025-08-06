@@ -16,12 +16,12 @@ export default function Home() {
         </div>
       </header>
       <div className="bg-gray-100">
-        <p className="text-sm italic">some quote</p>
+        <p className="text-sm italic pl-1">everything in time</p>
       </div>
 
       {/* MAIN CONTENT */}
         {/* intro section */}
-        <div className="border-1 p-13 flex">
+        <div className="border-1 p-5 flex">
           <Image
             className="rounded-full w-32 h-32"
             src="/header1.jpeg"
@@ -29,7 +29,9 @@ export default function Home() {
             width="33"
             height="33"
           />
-          <p className="pl-3">My intro, what motivates me, and what I love</p>
+          <p className="text-center pt-9 pl-10 pr-20">Hello, my name is Malena Lodi, and I’m a Software Engineer. 
+                              I like reading, outdoor activities, and sweet treats. 
+                              This site is a small window into what I’ve been working on and what I care about.</p>
         </div>
 
         {/* project section */}
@@ -87,8 +89,8 @@ export default function Home() {
 
       {/* FOOTER CONTENT */}
        {/* info about website */}
-       <footer className="mt-8 text-sm italic text-gray-500 text-center">
-          <p>this website was created using dadadada</p>
+       <footer className="mt-8 text-xs italic text-gray-500 text-center">
+          <p>Built using Next.js, React, and Tailwind CSS. Deployed with Vercel.</p>
        </footer>
 
 
