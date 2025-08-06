@@ -35,10 +35,10 @@ export default function Home() {
             </p>  
             <p className="text-center  mt-5">
             <span className="text-green-800 font-bold underline hover:text-green-600 mr-3">
-                  <a href="mailto:malenalodi3@gmail.com">Send Email</a>
+                  <a href="mailto:malenalodi3@gmail.com">Send An Email</a>
             </span>
             <span className="text-green-800 font-bold underline hover:text-green-600 ml-3">
-                  <a href="tel:+16267558760">Make Call</a>
+                  <a href="tel:+16267558760">Make A Call</a>
             </span>
             </p>
         </section>

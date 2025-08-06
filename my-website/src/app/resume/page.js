@@ -16,8 +16,7 @@ export default function Home() {
         </div>
       </header>
       <div className="bg-gray-100">
-      <p className="text-sm italic pl-1">everything in time</p>
-
+        <p className="text-sm italic pl-1">everything in time</p>
       </div>
 
       {/* MAIN CONTENT */}
@@ -32,11 +31,11 @@ export default function Home() {
               rel="noopener noreferrer"
             >
             <Image
-              src="/resume-preview.png"
+              src="/resume-preview.jpeg"
               alt="Preview of Malena Lodi's Resume"
               width={600}
               height={800}
-              className="rounded-md hover:shadow-xl transition"
+              className="rounded-md hover:shadow-xl transition border-2 border-solid"
             />
             </a>
         </section>
