@@ -21,46 +21,109 @@ export default function Home() {
       
       
       {/* project section */}
-      <section className="bg-gray-100 p-6 mt-5 mb-5 rounded-md shadow">
-    
-        <h2 className="text-xl font-bold mb-4">Featured Projects</h2>
-        
+        {/* FEATURED PROJECTS */}
+              <section className="bg-gray-100 p-6 mt-8 rounded-md shadow">
+                <h2 className="text-xl font-bold mb-4">Featured Projects</h2>
       
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
-            <div key={num} className="group [perspective:1000px]">
-              <div
-                className="relative w-full h-48 transition-transform duration-500 group-hover:[transform:rotateY(180deg)]"
-                style={{
-                  transformStyle: "preserve-3d",
-                  transformOrigin: "center",
-                }}
-              >
-                {/* Front */}
-                <div
-                  className="absolute inset-0"
-                  style={{ backfaceVisibility: "hidden" }}
-                >
-                  <Image
-                    src={`/header${num}.jpeg`}
-                    alt={`Project ${num}`}
-                    fill
-                    className="object-cover rounded-md"
-                  />
-                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                  {[
+                    { num: 1, title: "Community Ping", desc: "A prototype feature for SnapChat: React, SQL, APIs...", link: "https://github.com/malena-3/Snap-CommunityPing"},
+                    { num: 2, title: "Student Mobile App", desc: "A student resource app for Pasadena City College: TypeScript, Ionic Framework...", link:"https://github.com/malena-3/mobile-app-pcc" },
+                    { num: 3, title: "Beetles, Bugs, & Butterflies Catelog", desc: ": JavaScript, HTML, & CSS.", link:"https://github.com/malena-3/theBBAndBCatalog" },
+                  ].map(({ num, title, desc, link }) => (
+                    <a
+                    key={num}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group [perspective:1000px] block"
+                  >
+                    <div
+                      className="relative w-full h-48 transition-transform duration-500 group-hover:[transform:rotateY(180deg)]"
+                      style={{
+                        transformStyle: "preserve-3d",
+                        transformOrigin: "center",
+                      }}
+                    >
+                      {/* Front */}
+                      <div
+                        className="absolute inset-0"
+                        style={{ backfaceVisibility: "hidden" }}
+                      >
+                        <Image
+                          src={`/header${num}.jpeg`}
+                          alt={title}
+                          fill
+                          className="object-cover rounded-md"
+                        />
+                      </div>
+            
+                      {/* Back */}
+                      <div
+                        className="absolute inset-0 bg-white flex items-center justify-center text-center text-sm p-4 rounded-md shadow"
+                        style={{
+                          backfaceVisibility: "hidden",
+                          transform: "rotateY(180deg)",
+                        }}
+                      >
+                        <p>
+                          <strong>{title}. </strong>{desc}
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+          ))}
+        </div>
+      {/* MORE PROJECTS */}
+        <h2 className="mt-8 text-xl font-bold mb-4">More Projects</h2>
       
-                {/* Back */}
-                <div
-                  className="absolute inset-0 bg-white flex items-center justify-center text-center text-sm p-4 rounded-md shadow"
-                  style={{
-                    backfaceVisibility: "hidden",
-                    transform: "rotateY(180deg)",
-                  }}
-                >
-                  <p>Project {num} description goes here.</p>
-                </div>
-              </div>
-            </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                  {[
+                    { num: 4, title: "Book Renting System", desc: "Final project for Object Oriented Programming course: C++", link: "https://github.com/malena-3/school_book_renting_system"},
+                    { num: 5, title: "TBD", desc: "", link:"" },
+                    { num: 6, title: "TBD", desc: "", link:"" },
+                  ].map(({ num, title, desc, link }) => (
+                    <a
+                    key={num}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group [perspective:1000px] block"
+                  >
+                    <div
+                      className="relative w-full h-48 transition-transform duration-500 group-hover:[transform:rotateY(180deg)]"
+                      style={{
+                        transformStyle: "preserve-3d",
+                        transformOrigin: "center",
+                      }}
+                    >
+                      {/* Front */}
+                      <div
+                        className="absolute inset-0"
+                        style={{ backfaceVisibility: "hidden" }}
+                      >
+                        <Image
+                          src={`/header${num}.jpeg`}
+                          alt={title}
+                          fill
+                          className="object-cover rounded-md"
+                        />
+                      </div>
+            
+                      {/* Back */}
+                      <div
+                        className="absolute inset-0 bg-white flex items-center justify-center text-center text-sm p-4 rounded-md shadow"
+                        style={{
+                          backfaceVisibility: "hidden",
+                          transform: "rotateY(180deg)",
+                        }}
+                      >
+                        <p>
+                          <strong>{title}. </strong>{desc}
+                        </p>
+                      </div>
+                    </div>
+                  </a>
           ))}
         </div>
 

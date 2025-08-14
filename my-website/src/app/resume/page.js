@@ -24,7 +24,8 @@ export default function Home() {
         {/* <section className="bg-blue-50 rounded-md mt-5 p-2 w-230"> */}
 
         <section className="flex flex-col items-center mt-5">
-          <h2 className="flex justify-center text-xl font-bold mb-4 text-center text-gray-500">Resume Preview</h2>
+          <h2 className="flex justify-center text-xl font-bold text-center text-gray-500">Resume Preview</h2>
+          <p className="text-xs mb-4 text-gray-500">(click to view pdf)</p>
            <a 
               href="/Malena-Lodi-Resume.pdf" 
               target="_blank" 
@@ -35,7 +36,7 @@ export default function Home() {
               alt="Preview of Malena Lodi's Resume"
               width={600}
               height={800}
-              className="rounded-md hover:shadow-xl transition border-2 border-solid"
+              className="rounded-md hover:shadow-xl transition"
             />
             </a>
         </section>

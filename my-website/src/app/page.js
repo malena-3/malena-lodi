@@ -23,11 +23,11 @@ export default function Home() {
         {/* intro section */}
         <div className="border-1 p-5 flex">
           <Image
-            className="rounded-full w-32 h-32"
-            src="/header1.jpeg"
+            className="rounded-full w-32 h-42"
+            src="/header.jpeg"
             alt="my_icon"
-            width="33"
-            height="33"
+            width="93"
+            height="93"
           />
           <p className="text-center pt-9 pl-10 pr-20">Hello, my name is Malena Lodi, and I’m a Software Engineer. 
                               I like reading, outdoor activities, and sweet treats. 
@@ -39,42 +39,56 @@ export default function Home() {
           <h2 className="text-xl font-bold mb-4">Featured Projects</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((num) => (
-              <div key={num} className="group [perspective:1000px]">
+            {[
+              { num: 1, title: "Community Ping", desc: "A prototype feature for SnapChat: React, SQL, APIs...", link: "https://github.com/malena-3/Snap-CommunityPing"},
+              { num: 2, title: "Student Mobile App", desc: "A student resource app for Pasadena City College: TypeScript, Ionic Framework...", link:"https://github.com/malena-3/Snap-CommunityPing" },
+              { num: 3, title: "Beetles, Bugs, & Butterflies Catelog", desc: ": JavaScript, HTML, & CSS.", link:"https://github.com/malena-3/Snap-CommunityPing" },
+            ].map(({ num, title, desc, link }) => (
+              <a
+              key={num}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group [perspective:1000px] block"
+            >
               <div
                 className="relative w-full h-48 transition-transform duration-500 group-hover:[transform:rotateY(180deg)]"
                 style={{
-                transformStyle: "preserve-3d",
-                transformOrigin: "center",
+                  transformStyle: "preserve-3d",
+                  transformOrigin: "center",
                 }}
               >
-          {/* Front */}
-          <div
-            className="absolute inset-0"
-            style={{ backfaceVisibility: "hidden" }}
-          >
-            <Image
-              src={`/header${num}.jpeg`}
-              alt={`Project ${num}`}
-              fill
-              className="object-cover rounded-md"
-            />
-          </div>
-
-          {/* Back */}
-          <div
-            className="absolute inset-0 bg-white flex items-center justify-center text-center text-sm p-4 rounded-md shadow"
-            style={{
-              backfaceVisibility: "hidden",
-              transform: "rotateY(180deg)",
-            }}
-          >
-            <p>Project {num} description goes here.</p>
-          </div>
-        </div>
-      </div>
+                {/* Front */}
+                <div
+                  className="absolute inset-0"
+                  style={{ backfaceVisibility: "hidden" }}
+                >
+                  <Image
+                    src={`/header${num}.jpeg`}
+                    alt={title}
+                    fill
+                    className="object-cover rounded-md"
+                  />
+                </div>
+      
+                {/* Back */}
+                <div
+                  className="absolute inset-0 bg-white flex items-center justify-center text-center text-sm p-4 rounded-md shadow"
+                  style={{
+                    backfaceVisibility: "hidden",
+                    transform: "rotateY(180deg)",
+                  }}
+                >
+                  <p>
+                    <strong>{title}. </strong>{desc}
+                  </p>
+                </div>
+              </div>
+            </a>
     ))}
   </div>
+
+
 
   {/* More button */}
   <div className="flex justify-end mt-4">
